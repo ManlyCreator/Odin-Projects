@@ -1,19 +1,41 @@
+<!-- TODO: Display icon next to title -->
 <!DOCTYPE html>
 <html lang="en">
 
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="./styles.css">
         <title>Recipes</title>
     </head>
 
     <body>
-        <h1>Meal Plan Recipes</h1>
-        <p>In this page I will share my meal plan by using basic HTML formatting.</p>
-        <h2>Recipes:</h2>
-        <ul>
-            <li><a href="./recipes/bulkingSmoothie.html">Bulking Smoothie</a></li>
-            <li><a href="./recipes/eggSaladSandwich.html">Egg Salad Sandwich</a></li>
-        </ul>
+        <div id="title-banner" class="aligned">
+            <h1 id="title">manlyrecipes</h1>
+            <img src="./images/PFP.jpeg" alt="Manly Creator Icon" id="icon">
+        </div>
+        <p id="banner" class="aligned">The gym bro's <span id="highlight">#1 meal-prepping</span> resource</p>
+        <div id="main" class="aligned">
+            <div id="featured">
+                <a href="./recipes/eggSaladSandwich.html">
+                    <img src="./images/eggSaladSandwich.jpg" id="featured-image"><br>
+                    The Ultimate Egg-Salad Sandwich for Bulking or Cutting<br>
+                    <p>Learn to craft a delicious egg-salad sandwich for any phase of your bodybuilding journey.</p>
+                </a>
+            </div>
+            <div id="recipes">
+                <h1>Recipes</h1>
+                <div id="recipes-list">
+                    <a href="./recipes/bulkingSmoothie.html">
+                        <img src="./images/bulkingSmoothie.jpg">
+                        Bulking Smoothie
+                    </a>
+                    <a href="./recipes/eggSaladSandwich.html">
+                        <img src="./images/eggSaladSandwich.jpg">
+                        Egg Salad Sandwich
+                    </a>
+                </div>
+            </div>
+        </div>
     </body>
 
 </html>
