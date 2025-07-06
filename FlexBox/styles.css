@@ -1,0 +1,21 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px;
+    background-color: cornflowerblue;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0px;
+    width: 50%;
+    color: white;
+    border: white 4px solid;
+}
