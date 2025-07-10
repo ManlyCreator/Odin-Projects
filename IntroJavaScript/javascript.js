@@ -1,4 +1,3 @@
-// TODO: Give the button functionality
 console.log("Hello, world!");
 console.log("This is being run from an external script");
 
@@ -14,7 +13,8 @@ let p      = document.querySelector("p")
 button.addEventListener("click", updateButton)
 
 function updateButton() {
-    if (button.textContent == "Stop Machine") {
+    console.log("Button Pressed");
+    if (button.textContent === "Stop Machine") {
         button.textContent = "Start Machine";
         p.textContent = "The machine is stopped";
     } else {
