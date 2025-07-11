@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Camelize</title>
+</head>
+<body>
+    <script>
+        let s = "-webkit-transition";
+        console.log(camelize(s));
+
+        function camelize(s) {
+            return s
+            .split("-")
+            .map((word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1))
+            .join("");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Filter Range</title>
+</head>
+<body>
+    <script>
+        let arr = [ 5, 3, 8, 1 ];
+        alert(filterRange(arr, 1, 4));
+
+        function filterRange(arr, min, max) {
+            return arr.filter((n) => { return n >= min && n <= max; });
+        }
+    </script>
+</body>
+</html>

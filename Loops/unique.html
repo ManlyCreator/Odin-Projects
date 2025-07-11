@@ -1,0 +1,24 @@
+<!-- TODO: Array & Loops Cardio Day -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unique</title>
+</head>
+<body>
+    <script>
+        let strings = [ "Hare", "Krishna", "Hare", "Krishna",
+            "Krishna", "Krishna", "Hare", "Hare", ":-O"
+        ];
+        console.log(unique(strings));
+
+        function unique(strings) {
+            let uniqueArr = [];
+            for (let str of strings)
+                if (!uniqueArr.includes(str))
+                    uniqueArr.push(str);
+            return uniqueArr;
+        }
+    </script>
+</body>
+</html>

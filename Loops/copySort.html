@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Copy Sort</title>
+</head>
+<body>
+    <script>
+        let arr = [ 5, 3, 8, 1 ];
+        let copy = copySort(arr);
+        console.log(copy);
+        console.log(arr);
+
+        function copySort(arr) {
+            // The arr has to be sliced first to create a copy, otherwise it will be overwritten
+            return arr.slice().sort();
+        }
+    </script>
+</body>
+</html>
