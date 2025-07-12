@@ -17,6 +17,8 @@ function addItem() {
     itemsList.appendChild(item)
 
     deleteButton.addEventListener("click", (e) => { itemsList.removeChild(item) })
+
+    input.focus()
 }
 
 button.addEventListener("click", addItem)
