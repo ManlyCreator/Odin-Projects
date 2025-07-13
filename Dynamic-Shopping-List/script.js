@@ -2,7 +2,7 @@ const input = document.querySelector(".input-container input")
 const button = document.querySelector(".input-container button")
 const itemsList = document.querySelector(".input-container ul")
 
-function addItem() {
+function addItem(e) {
     if (input.value == "") return
     const item = document.createElement("li")
     const itemName = document.createElement("span")

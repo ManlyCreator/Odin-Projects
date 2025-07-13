@@ -1,4 +1,5 @@
 const container = document.querySelector(".container");
+const buttons = document.querySelector(".buttons");
 
 const p = document.createElement("p");
 p.innerText = "Hey I'm red!";
@@ -21,3 +22,7 @@ div.appendChild(inner_h1);
 const inner_p = document.createElement("p");
 inner_p.innerText = "ME TOO!";
 div.appendChild(inner_p);
+
+buttons.addEventListener("click", (e) => {
+    alert(`Button ${e.target.id.slice(0, 1).toUpperCase() + e.target.id.slice(1)} Clicked!`)
+})
