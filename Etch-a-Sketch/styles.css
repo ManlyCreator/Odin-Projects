@@ -1,0 +1,37 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 0;
+    margin: 16px;
+    box-sizing: border-box;
+}
+
+.change-dimensions {
+    width: 128px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    color: white;
+    background: hsl(211, 100%, 70%);
+    transition: 0.1s;
+}
+
+.change-dimensions:hover {
+    background: hsl(211, 50%, 50%);
+}
+
+.canvas {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80vh;
+    height: 80vh;
+    background: hsl(210, 0%, 91);
+    border: 48px solid hsl(39, 100%, 66%);
+    border-radius: 16px;
+}
+
+.cell {
+    transition: 0.1s;
+}
