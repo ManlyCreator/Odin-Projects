@@ -37,6 +37,12 @@ body {
     text-align: end;
 }
 
+.other-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
 .buttons {
     display: flex;
     align-items: center;
@@ -46,9 +52,9 @@ body {
     height: 60%;
 }
 
-.buttons button {
+.container button {
     width: 22.9%;
-    height: 20%;
+    height: 50px;
     border-radius: 16px;
     font-size: 32px;
 }
