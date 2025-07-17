@@ -1,5 +1,3 @@
-// TODO: Keyboard Input
-
 const MAX_DIGITS = 16
 
 const screenText = document.querySelector(".screen-text")
@@ -20,21 +18,30 @@ let operandPointer = 0
 clearButton.addEventListener("click", clear)
 deleteButton.addEventListener("click", backspace)
 
+document.addEventListener("keydown", handleKeys)
+
 buttons.forEach((button) => {
     button.addEventListener("click", handleInput)
-    button.addEventListener("keydown", (ev) => {
-        console.log(ev.key)
-    })
 })
 
+function handleKeys(event) {
+    if (!event.key) return
+    const key = event.key
+    if (operands.includes(key) || operators.includes(key)) handleInput(event)
+    if (key == "Enter" && operandStack.length == 2) {
+        screenText.innerText = evaluate()
+        operandPointer = 0
+    }
+    if (key == "Delete") clear()
+    if (key == "Backspace") backspace()
+}
 
 function handleInput(event) {
     if (error) clear()
-    const command = event.target.innerText
+    const command = event.key || event.target.innerText
     if (command == "=" && operandStack.length == 2) {
         screenText.innerText = evaluate()
         operandPointer = 0
-        
     } else if (operands.includes(command)) {
         if (command == "." && screenText.innerText.includes(".")) return
         if (screenText.innerText.length == 0 || isNaN(Number(screenText.innerText)) || justOperated == true) {
@@ -52,12 +59,6 @@ function handleInput(event) {
         if (operandStack.length == 2) screenText.innerText = evaluate(); operandPointer = 1
         operator = command
     }
-    console.log(screenText.innerText.includes("."))
-    console.log("Screen Text:", screenText.innerText)
-    console.log("Just Operated:", justOperated)
-    console.log("Operand Stack:", operandStack)
-    console.log("Operand Pointer:", operandPointer)
-    console.log("Operator:", operator)
 }
 
 function evaluate() {
