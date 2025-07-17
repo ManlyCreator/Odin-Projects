@@ -1,5 +1,6 @@
-// TODO: Debug why str.includes() does not pick up the "." symbol
 // TODO: Keyboard Input
+
+const MAX_DIGITS = 16
 
 const screenText = document.querySelector(".screen-text")
 const clearButton = document.querySelector(".other-buttons .clear")
@@ -21,21 +22,26 @@ deleteButton.addEventListener("click", backspace)
 
 buttons.forEach((button) => {
     button.addEventListener("click", handleInput)
+    button.addEventListener("keydown", (ev) => {
+        console.log(ev.key)
+    })
 })
+
 
 function handleInput(event) {
     if (error) clear()
     const command = event.target.innerText
-    console.log(screenText.innerText.includes("."))
     if (command == "=" && operandStack.length == 2) {
         screenText.innerText = evaluate()
         operandPointer = 0
         
     } else if (operands.includes(command)) {
-        if (command == "." && !screenText.innerText.includes(".")) {
-            screenText.innerText += "."
-        } else if (isNaN(Number(screenText.innerText)) || justOperated == true) {
-            screenText.innerText = command
+        if (command == "." && screenText.innerText.includes(".")) return
+        if (screenText.innerText.length == 0 || isNaN(Number(screenText.innerText)) || justOperated == true) {
+            if (command == ".")
+                screenText.innerText = "0."
+            else
+                screenText.innerText = command
             justOperated = false
         } else 
             screenText.innerText += command
@@ -46,6 +52,7 @@ function handleInput(event) {
         if (operandStack.length == 2) screenText.innerText = evaluate(); operandPointer = 1
         operator = command
     }
+    console.log(screenText.innerText.includes("."))
     console.log("Screen Text:", screenText.innerText)
     console.log("Just Operated:", justOperated)
     console.log("Operand Stack:", operandStack)
@@ -82,7 +89,7 @@ function evaluate() {
 
     operandStack[0] = result
     justOperated = true
-    return result
+    return result.toFixed(2)
 }
 
 function clear() {
