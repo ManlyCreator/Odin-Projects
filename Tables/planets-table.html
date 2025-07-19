@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planets</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <table>
+        <caption>Data about the planets of our solar system (Planetary facts taken from <a href="http://nssdc.gsfc.nasa.gov/planetary/factsheet/">Nasa's Planetary Fact Sheet - Metric</a>).</caption>
+        <thead>
+            <tr>
+                <td colspan="2"></td>
+                <th>Name</td>
+                <th>Mass<br>(10<sup>24</sup>kg)</td>
+                <th>Diameter<br>(km)</td>
+                <th>Density<br>(kg/m<sup>2</sup>)</td>
+                <th>Gravity<br>(m/s<sup>2</sup>)</td>
+                <th>Length of day<br>(hours)</td>
+                <th>Distance from<br>Sun (10<sup>6</sup>km)</td>
+                <th>Mean temperature<br>(&degC)</td>
+                <th>Number of moons</td>
+                <th>Notes</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="terrestrial-planets">
+                <td rowspan="4" colspan="2">Terrestrial planets</td>
+            </tr>
+            <tr id="mercury", header="terrestrial-planets">
+                <td>Mercury</td>
+            </tr>
+            <tr id="venus", header="terrestrial-planets">
+                <td>Venus</td>
+            </tr>
+            <tr id="earth", header="terrestrial-planets">
+                <td>Earth</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
