@@ -1,3 +1,4 @@
+<!-- TODO: Fix jovian-planets formatting -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,30 +13,52 @@
         <thead>
             <tr>
                 <td colspan="2"></td>
-                <th>Name</td>
-                <th>Mass<br>(10<sup>24</sup>kg)</td>
-                <th>Diameter<br>(km)</td>
-                <th>Density<br>(kg/m<sup>2</sup>)</td>
-                <th>Gravity<br>(m/s<sup>2</sup>)</td>
-                <th>Length of day<br>(hours)</td>
-                <th>Distance from<br>Sun (10<sup>6</sup>km)</td>
-                <th>Mean temperature<br>(&degC)</td>
-                <th>Number of moons</td>
-                <th>Notes</td>
+                <th>Name</th>
+                <th>Mass<br>(10<sup>24</sup>kg)</th>
+                <th>Diameter<br>(km)</th>
+                <th>Density<br>(kg/m<sup>2</sup>)</th>
+                <th>Gravity<br>(m/s<sup>2</sup>)</th>
+                <th>Length of day<br>(hours)</th>
+                <th>Distance from<br>Sun (10<sup>6</sup>km)</th>
+                <th>Mean temperature<br>(&degC)</th>
+                <th>Number of moons</th>
+                <th>Notes</th>
             </tr>
         </thead>
         <tbody>
             <tr id="terrestrial-planets">
                 <td rowspan="4" colspan="2">Terrestrial planets</td>
             </tr>
-            <tr id="mercury", header="terrestrial-planets">
+            <tr id="mercury", headers="terrestrial-planets">
                 <td>Mercury</td>
             </tr>
-            <tr id="venus", header="terrestrial-planets">
+            <tr id="venus", headers="terrestrial-planets">
                 <td>Venus</td>
             </tr>
-            <tr id="earth", header="terrestrial-planets">
+            <tr id="earth", headers="terrestrial-planets">
                 <td>Earth</td>
+            </tr>
+
+            <tr id="jovian-planets">
+                <td rowspan="5">Jovian Planets</td>
+            </tr>
+            <tr id="gas-giants">
+                <td rowspan="3">Gas giants</td>
+            </tr>
+            <tr id="jupiter" headers="jovian-planets gas-giants">
+                <td>Jupiter</td>
+            </tr>
+            <tr id="saturn" headers="jovian-planets gas-giants">
+                <td>Saturn</td>
+            </tr>
+            <tr id="ice-giants">
+                <td rowspan="3">Ice giants</td>
+            </tr>
+            <tr id="uranus" headers="jovian-planets ice-giants">
+                <td>Uranus</td>
+            </tr>
+            <tr id="neptune" headers="jovian-planets ice-giants">
+                <td>Neptune</td>
             </tr>
         </tbody>
     </table>
